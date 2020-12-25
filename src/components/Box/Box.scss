@@ -1,0 +1,17 @@
+@import '../../assets/scss/variables';
+
+#Box {
+  width: fit-content;
+  background-color: $mid-dark-color;
+  border-radius: 10px;
+  padding: 5px;
+  color: $light-color;
+  font-size: 0.9rem;
+  margin-right: 5px;
+  text-align: center;
+
+  img {
+    width: 75px;
+    border-radius: 10px;
+  }
+}

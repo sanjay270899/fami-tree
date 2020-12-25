@@ -1,0 +1,57 @@
+@import '../../assets/scss/variables';
+
+.Container {
+  //   background-color: rgba(purple, 0.1);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-line {
+    display: flex;
+    width: 100%;
+    height: 15px;
+
+    &-left {
+      width: 50%;
+
+      &-u {
+        width: 50%;
+        border-top: 3px solid $mid-dark-color;
+      }
+
+      &-r {
+        width: 50%;
+        border-right: 3px solid $mid-dark-color;
+      }
+    }
+
+    &-right {
+      width: 50%;
+
+      &-u {
+        width: 50%;
+        border-top: 3px solid $mid-dark-color;
+      }
+
+      &-l {
+        width: 50%;
+        border-left: 3px solid $mid-dark-color;
+      }
+
+      &-u-l {
+        width: 50%;
+        border-top: 3px solid $mid-dark-color;
+        border-left: 3px solid $mid-dark-color;
+      }
+    }
+  }
+
+  &-body {
+    display: flex;
+  }
+
+  &-children {
+    display: flex;
+  }
+}

@@ -1,0 +1,10 @@
+@import '../../assets/scss/variables';
+
+#Body {
+  display: flex;
+  align-items: center;
+  background-color: $light-color;
+  min-height: 89vh;
+  padding: 1vh;
+  overflow-x: scroll;
+}
