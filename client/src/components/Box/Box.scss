@@ -9,11 +9,20 @@
   font-size: 0.9rem;
   margin-right: 5px;
   text-align: center;
-  cursor: pointer;
+
+  &-options {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.1rem;
+
+    .edit {
+      cursor: pointer;
+    }
+  }
 
   img {
     width: 75px;
-    border-radius: 10px;
+    border-radius: 100%;
   }
 }
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../assets/style/Box.css';
 import defaultProfile from '../../assets/img/default.jpg';
+import { FaUserEdit } from 'react-icons/fa';
 
 function Box(props) {
 
@@ -11,15 +12,18 @@ function Box(props) {
         setIsEdit(current => !current);
     }
 
-    function changeData(data) {
-        props.data = data;
-        setData(data);
-    }
+    // function changeData(data) {
+    //     props.data = data;
+    //     setData(data);
+    // }
 
     return (
         <>
-            <div id="Box" onClick={toggleEdit}>
-                <img src={defaultProfile} alt="Profile Photo" />
+            <div id="Box" >
+                <div id="Box-options">
+                    <FaUserEdit onClick={toggleEdit} className="edit" />
+                </div>
+                <img src={defaultProfile} alt="Profile" />
                 <div className="Box-name">{data.own.name}</div>
             </div>
             {
@@ -38,7 +42,7 @@ function EditMenu(props) {
 
     const [errors, setErrors] = useState([])
 
-    function submit() {
+    function onUpdate() {
         if (name === '') {
             setErrors(current => [...current, "Empty name is not allowed!"]);
             setTimeout(() => {
@@ -54,15 +58,23 @@ function EditMenu(props) {
         }
     }
 
+    function onCancel() {
+        props.setIsEdit(current => !current);
+    }
+
     return (
         <div id="EditMenu">
             <div className="in">
+                <div className="cancel"></div>
                 <div className="in-Name">
                     <label htmlFor="in-name">
                         Name: <input type="text" name="" id="in-name" value={name} onChange={(e) => changeName(e.target.value)} />
                     </label>
                 </div>
-                <button onClick={submit}>Submit</button>
+                <div className="buttons">
+                    <button onClick={onUpdate}>Update</button>
+                    <button onClick={onCancel}>Cancel</button>
+                </div>
             </div>
 
             <div className="errors">

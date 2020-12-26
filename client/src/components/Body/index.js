@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import axios from 'axios'
 import '../../assets/style/Body.css';
 import Container from '../Container';
 
 function Body() {
+
+    useEffect(() => {
+        axios.get('/api/v1/user/all-users')
+            .then(res => {
+                console.log(res.data);
+            });
+    }, [])
 
     const data = {
         own: {
