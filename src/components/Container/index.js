@@ -14,7 +14,7 @@ function Container(props) {
                 </div>
             }
             <div className="Container-body">
-                <Box name={props.data.own.name} />
+                <Box data={props.data} />
             </div>
             {
                 props.data.children.length > 0 &&
