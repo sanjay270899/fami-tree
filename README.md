@@ -6,10 +6,10 @@ Create your own Family tree with Fami-tree website.
 
 # Tech Stack
 
-ReactJS
-NodeJS
-ExpressJS
-MongoDB
+* ReactJS
+* NodeJS
+* ExpressJS
+* MongoDB
 
 # What to contribute?
 
