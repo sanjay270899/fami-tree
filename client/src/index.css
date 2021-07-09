@@ -1,13 +1,121 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.tree {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.tree ul {
+  padding-top: 20px;
+  position: relative;
+  transition: 0.5s;
+  display: flex;
+}
+
+.tree li {
+  display: inline-table;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.tree li span {
+  background-color: whitesmoke;
+}
+
+.tree li span:hover {
+  background-color: white;
+}
+
+.tree li::before, .tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid violet;
+  width: 51%;
+  height: 10px;
+}
+
+.tree li:after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+.tree li:only-child:after, .tree li:only-child:before {
+  display: none;
+}
+
+.tree li:only-child {
+  padding-top: 0;
+}
+
+.tree li:first-child:before, .tree li:last-child:after {
+  border: 0 none;
+}
+
+.tree li:last-child:before {
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child:after {
+  border-radius: 5px 0 0 0;
+}
+
+.tree ul ul:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+
+.tree span {
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: inline-grid;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.tree span img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 10px !important;
+  border-radius: 100px;
+  margin: auto;
+}
+
+.tree span span {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #666;
+  padding: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
