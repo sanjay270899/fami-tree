@@ -109,7 +109,7 @@ body {
   margin: auto;
 }
 
-.tree span span {
+.tree span input {
   border: 1px solid #ccc;
   border-radius: 5px;
   color: #666;
@@ -118,4 +118,5 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
+  width: 100px;
 }
